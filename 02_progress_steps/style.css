@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+
+:root {
+  --line-border-fill: rgb(0, 145, 0);
+  --line-border-empty: #ff6f00;
+  --background-color: rgb(255, 246, 218);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Fugaz One";
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: rgb(254, 245, 179);
+  padding: 80px 90px;
+  border: 16px solid rgb(0, 152, 10);
+  box-shadow: 6px 6px 16px rgb(194, 190, 156);
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  max-width: 100%;
+  width: 30vw;
+}
+
+.progress-container::before {
+  content: "";
+  background-color: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 5px;
+  width: 100%;
+}
+
+.progress {
+  background-color: var(--line-border-fill);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 5px;
+  width: 0%;
+  transition: 0.4s ease-in-out;
+}
+
+.circle {
+  background-color: rgb(255, 249, 227);
+  color: var(--line-border-empty);
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: 0.4s ease-in-out;
+  font-size: 1.1rem;
+  z-index: 1;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
+  color: var(--line-border-fill);
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.6rem 2.2rem;
+  margin: 5px;
+  font-size: 1rem;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1100px) {
+  .progress-container {
+    width: 40vw;
+    transition: ease all 0.5s;
+  }
+}
+@media (max-width: 800px) {
+  .progress-container {
+    width: 50vw;
+    transition: ease all 0.5s;
+  }
+}
+@media (max-width: 600px) {
+  .progress-container {
+    width: 60vw;
+    transition: ease all 0.5s;
+  }
+}
+@media (max-width: 400px) {
+  .progress-container {
+    width: 70vw;
+    transition: ease all 0.5s;
+  }
+}
