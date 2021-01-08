@@ -144,3 +144,23 @@ hr {
   border: 3px solid black;
   max-width: 58vw;
 }
+
+@media (min-width: 700px) {
+  .container.show-nav {
+    transform: rotate(-14deg);
+    transition: transform 0.5s ease;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container.show-nav {
+    transform: rotate(-16deg);
+    transition: transform 0.5s ease;
+  }
+}
+@media (min-width: 1400px) {
+  .container.show-nav {
+    transform: rotate(-20deg);
+    transition: transform 0.5s ease;
+  }
+}
