@@ -10,6 +10,7 @@ sounds.forEach((sound) => {
     const soundElement = document.getElementById(sound);
     soundElement.volume = 0.2;
     soundElement.play();
+    btn.innerHTML = sound + "👏";
   });
 
   document.getElementById("buttons").appendChild(btn);
