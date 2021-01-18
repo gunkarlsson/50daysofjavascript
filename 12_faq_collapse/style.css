@@ -1,12 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Emblema+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Marko+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yatra+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poller+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Chela+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
@@ -15,12 +8,94 @@
 }
 
 body {
-  font-family: "Open Sans";
+  font-family: "Marko One";
+  background-color: rgb(233, 225, 223);
+}
+
+h1 {
+  margin: 60px 0 60px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq {
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s ease;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active {
+  background-color: white;
+}
+
+.faq.active::before {
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
+  color: rgba(203, 183, 177, 0.6);
+  font-size: 3rem;
+  position: absolute;
+  opacity: 0.2;
+  bottom: 5px;
+  right: 7px;
+  z-index: 0;
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.faq-toggle:focus {
+  outline: none;
+}
+
+.faq-toggle .fa-times {
+  display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+  color: white;
+  display: block;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: #b8a6a2;
 }
