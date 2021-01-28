@@ -7,11 +7,10 @@ const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 const searchButton = document.querySelector(".search-button");
-const input = document.querySelector(".input");
 
 searchButton.addEventListener("click", () => {
   form.classList.toggle("active");
-  input.focus();
+  search.focus();
 });
 
 //Get initial movies

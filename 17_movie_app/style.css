@@ -7,7 +7,8 @@
   --primary-color: #133195;
   /* --primary-color: #061960; */
   --secondary-color: #1b41b4;
-  --accent-color: #f4712b;
+  --accent-color: #ff7700;
+  --shadow-color: #0c2268;
 }
 * {
   box-sizing: border-box;
@@ -29,56 +30,55 @@ header {
 
 header h1 {
   font-family: "Yatra One";
+  background-color: var(--shadow-color);
   color: var(--accent-color);
-  margin: 3px 0 0 40px;
-  font-size: 1.6rem;
+  margin: 0 0 0 40px;
+  padding: 5px 20px 0 20px;
+  font-size: 1.8rem;
 }
 
 /* SEARCH */
+
 .search {
-  background-color: transparent;
-  border: 2px solid var(--accent-color);
+  background-color: var(--shadow-color);
+  border: 0;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: white;
-  padding: 0.5rem 1rem;
   margin: 0 40px 0 0;
+  padding: 1rem 1rem;
+  height: 50px;
+  width: 50px;
+  transition: all 0.4s ease;
 }
 
 .search::placeholder {
   color: var(--accent-color);
-  font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 0.3px;
 }
 
-.search:focus {
+.search:focus,
+.search-button:focus {
   outline: none;
-  background-color: var(--primary-color);
 }
 
-/* SEARCH 2 */
 #form {
   position: relative;
   height: 50px;
 }
 
-.input {
-  border: 2px solid var(--accent-color);
-  font-size: 1rem;
-  padding: 1rem 1rem;
-  height: 50px;
-  width: 50px;
-  transition: width 0.4s ease;
-}
-
-#form.active .input {
+#form.active .search {
   width: 200px;
+  color: white;
+  transition: all 0.4s ease;
 }
 
 .search-button {
-  background-color: transparent;
-  border: 2px solid var(--accent-color);
+  background-color: var(--shadow-color);
+  border: 0;
+  color: var(--accent-color);
   cursor: pointer;
   font-size: 1.3rem;
   position: absolute;
@@ -86,11 +86,12 @@ header h1 {
   left: 0;
   height: 50px;
   width: 50px;
-  transition: transform 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 #form.active .search-button {
   transform: translateX(180px);
+  font-size: 1rem;
 }
 
 /* MAIN */
@@ -105,29 +106,24 @@ main {
   width: 300px;
   margin: 1rem;
   background-color: var(--secondary-color);
-  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.35);
   position: relative;
   overflow: hidden;
 }
 
 .movie img {
   width: 100%;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
   /* filter: saturate(0%); */
   /* background-color: red; */
-  filter: grayscale(100%);
   /* background-color: lighten(blue, 25%); */
-
-  transition: all 0.3s ease;
 }
 
-.movie img:hover {
+.movie:hover img {
   filter: grayscale(0%);
   transition: all 0.3s ease;
 }
-
-/* .movie:hover img {
-  filter: saturate(100%);
-} */
 
 .movie-info {
   color: white;
@@ -143,7 +139,7 @@ main {
 }
 
 .movie-info span {
-  background-color: var(--primary-color);
+  background-color: var(--shadow-color);
   padding: 0.3rem 0.5rem;
   border-radius: 3px;
   font-weight: 600;
@@ -151,20 +147,22 @@ main {
 }
 
 .movie-info span.green {
-  color: rgb(161, 255, 183);
+  color: rgb(97, 255, 116);
 }
 
 .movie-info span.orange {
-  color: rgb(255, 191, 28);
+  color: rgb(255, 229, 28);
 }
 
 .movie-info span.red {
-  color: rgb(255, 112, 112);
+  color: rgb(255, 87, 87);
 }
 
 .overview {
-  background-color: white;
-  padding: 2rem;
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9));
+  color: var(--primary-color);
+  font-weight: 500;
+  padding: 1.3rem 1.5rem 1.5rem 1.5rem;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -173,6 +171,11 @@ main {
   transform: translateY(101%);
   opacity: 0.5;
   transition: all 0.4s ease-in-out;
+}
+
+.overview h3 {
+  margin: 0 0 10px 0;
+  font-family: "Yatra One";
 }
 
 .movie:hover .overview {
@@ -190,25 +193,24 @@ main {
 }
 
 .btn {
-  background-color: #fff;
+  font-family: "Yatra One";
+  font-size: 1.3rem;
+  background-color: transparent;
+  color: var(--accent-color);
   border: 0;
   cursor: pointer;
-  font-size: 24px;
   position: relative;
-  top: 0;
+  top: 1;
   left: 0;
-  margin: 0 30px;
-  padding: 11.5px 20px;
-  transition: transform 0.3s ease;
-  border-radius: 50px;
-  color: rgb(95, 95, 95);
+  margin: 0 2px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .btn:hover {
-  border: 1px solid rgb(55, 39, 199);
-  color: rgb(87, 39, 199);
-  font-weight: bolder;
-  transform: scale(0.98);
+  background-color: var(--secondary-color);
 }
 
 .btn:focus,
@@ -217,7 +219,5 @@ main {
 }
 
 .btn.full {
-  background-color: Var(--secondary-color);
-  border: 1px solid #fff;
-  color: #fff;
+  background-color: var(--shadow-color);
 }
