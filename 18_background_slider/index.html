@@ -10,10 +10,45 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>My Project</title>
+    <title>Background slider</title>
   </head>
   <body>
-    <h1>Project Starter</h1>
+    <div class="slider-container">
+      <div
+        class="slide active"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1478071735433-5d8f19ad0fca?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80');
+        "
+      ></div>
+
+      <div
+        class="slide"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1569017445909-fb7145e94858?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+        "
+      ></div>
+
+      <div
+        class="slide"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1572079016758-5437d4152d16?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+        "
+      ></div>
+
+      <div
+        class="slide"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1458668383970-8ddd3927deed?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1494&q=80');
+        "
+      ></div>
+
+      <button class="arrow left-arrow" id="left">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <button class="arrow right-arrow" id="right">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
 
     <script src="script.js"></script>
   </body>
