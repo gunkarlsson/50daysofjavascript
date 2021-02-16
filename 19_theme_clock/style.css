@@ -1,12 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Emblema+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Marko+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yatra+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poller+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Chela+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
@@ -14,13 +6,124 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: rgb(10, 16, 11);
+  --secondary-color: rgb(247, 242, 231);
+}
+
+html.dark {
+  --primary-color: rgb(247, 242, 231);
+  --secondary-color: #333;
+}
+
+html.dark {
+  background-color: #111;
+  color: var(--primary-color);
+}
+
+html {
+  transition: all 0.5s ease;
+}
+
 body {
-  font-family: "Open Sans";
+  font-family: "Yatra One";
+  background-color: var(--secondary-color);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
   margin: 0;
+}
+
+.toggle {
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  position: absolute;
+  top: 90px;
+  cursor: pointer;
+}
+
+.toggle:focus {
+  outline: none;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.needle {
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  transform-origin: bottom center;
+}
+
+.needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+  width: 5px;
+  transition: transform 0.5s ease;
+}
+
+.needle.minute {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 90px;
+  width: 3px;
+  transition: transform 0.5s ease;
+}
+
+.needle.second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+  width: 3px;
+  background-color: rgb(208, 105, 105);
+}
+
+.center-point {
+  background-color: rgb(208, 105, 105);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.center-point::after {
+  content: "";
+  background-color: var(--primary-color);
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.time {
+  font-size: 4rem;
+  line-height: 4rem;
+  margin-top: 100px;
+}
+
+.date {
+  font-size: 1.2rem;
 }
