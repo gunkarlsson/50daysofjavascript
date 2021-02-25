@@ -9,15 +9,128 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: "Josefin Sans";
+  background-color: #00aac4;
+  font-family: "Montserrat";
+  color: black;
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  background-color: #ffcc00;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.4s ease;
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav .container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
   align-items: center;
   justify-content: center;
+}
+
+.nav a {
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.nav.active {
+  background-color: #00aac4;
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav.active a {
+  color: white;
+}
+
+.nav.active.container {
+  padding: 10px 0;
+}
+
+/* HERO */
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
   height: 100vh;
-  overflow: hidden;
-  margin: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: -2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-family: "Racing Sans One";
+  font-size: 4rem;
+  margin: -20px 0 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* CONTENT */
+.content h2,
+.content h3 {
+  font-size: 1.6rem;
+  margin: 30px 30px 10px 30px;
+  color: rgb(255, 255, 255);
+}
+
+.content p {
+  color: rgb(255, 255, 255);
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  margin: 0 30px 30px 30px;
 }
