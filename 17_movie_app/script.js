@@ -86,11 +86,11 @@ function highlightbuttons(idx) {
 
   getMovies(API_URL + page);
 
-  buttons.forEach((button, idx2) => {
-    if (idx2 == idx) {
-      button.classList.add("full");
-    } else {
-      button.classList.remove("full");
-    }
-  });
+  // buttons.forEach((button, idx2) => {
+  //   if (idx2 == idx) {
+  //     button.classList.add("full");
+  //   } else {
+  //     button.classList.remove("full");
+  //   }
+  // });
 }
