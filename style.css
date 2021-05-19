@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marko+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yatra+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Open Sans";
-  background-color: rgb(250, 221, 232);
-  color: rgb(255, 0, 0);
+  font-family: "Yatra One";
+  background-color: #e9bbc2;
+  color: rgb(0, 21, 177);
 }
 
 .container {
@@ -16,51 +22,36 @@ body {
   width: 95vw;
   margin: auto;
   margin-top: 15px;
-  overflow: hidden;
   /* border: 3px solid yellow; */
 }
 
 /* HEADER TEXT */
 h1 {
-  font-weight: 800;
+  text-align: center;
+  font-weight: 500;
   font-size: 15rem;
-  margin-top: 0px;
-  margin-left: 40px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 0px;
   line-height: 1em;
   text-decoration: underline;
-}
-/* h1:hover {
-  font-style: italic;
-} */
-
-/* H3 TEXT */
-h3 {
-  font-size: 1.2em;
-  font-style: italic;
-  margin-left: 110px;
-  margin-top: 0px;
-}
-
-h3:hover {
-  font-weight: 700;
 }
 
 a {
   text-decoration: none;
-  color: rgb(255, 0, 0);
+  color: rgb(0, 21, 177);
 }
 
 a:hover {
-  background-color: red;
+  background-color: rgb(0, 21, 177);
   color: white;
 }
 
 /* DAY COLUMNS */
 .days-container {
+  padding: 40px;
   display: grid;
-  grip-column-gap: 10px;
-  justify-content: space-around;
+  grid-column-gap: 10px;
+  justify-content: space-between;
 }
 .column1 {
   grid-column: 1 / 5;
