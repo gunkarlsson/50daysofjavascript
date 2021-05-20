@@ -1,4 +1,5 @@
 const leftBtn = document.getElementById("left");
+
 const rightBtn = document.getElementById("right");
 const projectTitle = document.getElementById("day-title");
 const projectFolders = [
@@ -30,6 +31,11 @@ const projectFolders = [
   "26_double_vertical_slider",
 ];
 
+const cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.pageX + "px";
+  cursor.style.top = e.pageY + "px";
+});
 let projectIndex = 0;
 
 rightBtn.addEventListener("click", () => {
