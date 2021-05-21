@@ -32,14 +32,14 @@ function createTags(input) {
 }
 
 function randomSelect() {
-  const times = 30;
+  const times = 20;
   const interval = setInterval(() => {
     const randomTag = pickRandomTag();
     highlightTag(randomTag);
     setTimeout(() => {
       unHighlightTag(randomTag);
-    }, 100);
-  }, 100);
+    }, 150);
+  }, 150);
 
   setTimeout(() => {
     clearInterval(interval);
@@ -47,8 +47,8 @@ function randomSelect() {
     setTimeout(() => {
       const randomTag = pickRandomTag();
       highlightTag(randomTag);
-    }, 100);
-  }, times * 100);
+    }, 150);
+  }, times * 150);
 }
 
 function pickRandomTag() {

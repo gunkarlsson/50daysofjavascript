@@ -37,7 +37,7 @@ h1 {
   background-color: white;
 }
 
-.faq.active::before {
+/* .faq.active::before {
   content: "\f075";
   font-family: "Font Awesome 5 Free";
   color: rgba(203, 183, 177, 0.6);
@@ -47,7 +47,7 @@ h1 {
   bottom: 5px;
   right: 7px;
   z-index: 0;
-}
+} */
 
 .faq-title {
   margin: 0 35px 0 0;
