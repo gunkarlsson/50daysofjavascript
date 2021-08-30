@@ -13,8 +13,7 @@
 }
 
 body {
-  background-color: rgb(255, 224, 124);
-  font-family: "Rakkas";
+  font-family: "Josefin Sans";
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,33 +21,4 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
-}
-
-h1 {
-  font-size: 3em;
-}
-div {
-  position: absolute;
-  bottom: 40px;
-  background: rgba(0, 0, 0, 0.1);
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 1em;
-}
-
-div label {
-  margin-right: 10px;
-}
-
-input {
-  width: 50px;
-  padding: 5px;
-  font-size: 1em;
-  background-color: rgb(255, 224, 124);
-  text-align: center;
-  border: none;
-}
-
-input:focus {
-  outline: none;
 }

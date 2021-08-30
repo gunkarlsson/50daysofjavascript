@@ -13,8 +13,8 @@
 }
 
 body {
-  background-color: rgb(255, 224, 124);
-  font-family: "Rakkas";
+  font-family: "Syne";
+  background-color: rgb(249, 244, 241);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,30 +25,74 @@ body {
 }
 
 h1 {
-  font-size: 3em;
+  margin-bottom: 60px;
 }
-div {
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  width: 200px;
+  font-size: 1.3em;
+}
+
+.toggle {
+  visibility: hidden;
+}
+
+.label {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  background-color: rgb(210, 206, 204);
+  border-radius: 50px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 15px 0;
+}
+
+.toggle:checked + .label {
+  background-color: rgb(73, 186, 109);
+}
+
+.ball {
+  background-color: #fff;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
   position: absolute;
-  bottom: 40px;
-  background: rgba(0, 0, 0, 0.1);
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 1em;
+top: 3px;
+left: 3px;
+align-items: center;
+justify-content: center;
+animation: slideOff 0.2s linear forwards; 
 }
 
-div label {
-  margin-right: 10px;
+.toggle:checked + .label .ball {
+  animation: slideOn 0.2s linear forwards;
 }
 
-input {
-  width: 50px;
-  padding: 5px;
-  font-size: 1em;
-  background-color: rgb(255, 224, 124);
-  text-align: center;
-  border: none;
+
+@keyframes slideOn {
+  0% {
+    transform: translateX(0) scale(1)
+  }
+  50% {
+    transform: translateX(20px) scale(1.1)
+  }
+  100% {
+    transform: translateX(40px) scale(1)
+  }
 }
 
-input:focus {
-  outline: none;
+@keyframes slideOff {
+  0% {
+    transform: translateX(40px) scale(1)
+  }
+  50% {
+    transform: translateX(20px) scale(1.1)
+  }
+  100% {
+    transform: translateX(0) scale(1)
+  }
 }
