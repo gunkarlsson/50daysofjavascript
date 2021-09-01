@@ -29,6 +29,14 @@ const projectFolders = [
   "24_content_placeholder",
   "25_sticky_navbar",
   "26_double_vertical_slider",
+  "27_toast_notification",
+  "28_github_profiles",
+  "29_double_heart_click",
+  "30_auto_text_effect",
+  "31_password_generator",
+  "32_good_cheap_fast",
+  "33_notes_app",
+  "34_animated_countdown",
 ];
 
 const cursor = document.querySelector(".cursor");
